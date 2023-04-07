@@ -16,3 +16,11 @@ featuring 6 channel audio, and a blitter chip for fast memory transfer.
 for Chip details [memory.md](https://github.com/MonstersGoBoom/MiniCube2/blob/main/Memory.md)
 
 for some musings [musing.md](https://github.com/MonstersGoBoom/MiniCube2/blob/main/Musings.md)
+
+Current similation targets.
+
+SDL2 desktop application. 
+
+ESP-32
+
+Rasperry PI Pico ( [@evolutional](https://twitter.com/evolutional) ) 
