@@ -1,0 +1,64 @@
+// BUILD with 
+// millfork.exe -Xr demo.mfk -g -t mcube
+
+import mcube
+
+volatile byte vbl 
+
+byte ticker 
+
+const array scaledWidth=[64,32,16,8]
+
+void main() {
+
+	asm {sei}
+
+	VDC.CLUT = hi(colors)
+	BLT.x = 0
+	BLT.y = 0
+	BLT.Width = 64
+	BLT.Height = 16
+	BLT.X_Scale = $00
+	BLT.Y_Scale = $40
+
+	APU.Page[0] = 0
+	APU.Control[1] = 00
+
+	IRQ_pointer=on_vblank.addr
+
+	asm {cli}
+
+	while true {
+		while(vbl!=1) {}
+		vbl=0
+		BLT.Page = $d+(ticker&1) 
+		VDC.Page = BLT.Page 		//	this won't take effect until vblank so it's safe to set the same value here
+		//	blit a full background as solid
+		BLT.X_Scale = $40
+		BLT.Y_Scale = $40
+		BLT.Width = $40
+		BLT.Height = $40
+		BLT.Stride = $40 
+		BLT.Source = sprite
+		BLT.Trigger = SOLID | BPP4 | 8;		
+		//	blit a scaling ball
+		BLT.X_Scale=ticker
+		BLT.Y_Scale=ticker
+		BLT.Width = 64 
+		BLT.Height = 16
+		BLT.Source = $200
+		BLT.Stride = $1 
+		BLT.Trigger = SOLID | BPP4 | $0;		
+		ticker+=1
+	}
+}
+
+interrupt void on_vblank()
+{
+	vbl = 1
+}
+
+const array colors align(256) = file("../resources/ball4.pal")
+const array sprite = file("../resources/ball4.raw")
+
+

@@ -1,0 +1,42 @@
+
+const byte SOLID 		= %00000000
+const byte KEYED 		= %10000000
+const byte ADDRESS 	= %01000000
+const byte BPP1 		= %00000000
+const byte BPP2 		= %00010000
+const byte BPP4 		= %00100000
+const byte BPP8 		= %00110000
+
+struct _blitter_type_ {
+	volatile sbyte x
+	volatile sbyte y 
+	volatile sbyte Width
+	volatile sbyte Height 
+	volatile byte Stride 
+	volatile byte X_Scale 
+	volatile byte Y_Scale 
+	volatile byte Page 
+	volatile word Source 
+	volatile byte Trigger
+	volatile byte Key 
+	volatile byte Mode
+}
+
+struct _audio_type_ {
+	array Page [6]
+	array Control [6]
+	array Freq_L [6]
+	array Freq_H [6]
+} 
+
+struct _video_type_ {
+	volatile byte Page
+	volatile byte CLUT
+	volatile byte Input
+}
+_video_type_ 		VDC @$ff00
+_blitter_type_ 	BLT @$ff03
+_audio_type_ 		APU @$ff20
+
+pointer IRQ_pointer@$fffe
+
