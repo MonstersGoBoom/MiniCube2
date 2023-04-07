@@ -46,6 +46,9 @@ $FF0F - experimental bits.
 	- 1 draw transparent. 
 		to be explained 
 
+TODO
+---- 
+clarify blitter cycle speeds. 
 
 Audio 
 -----
