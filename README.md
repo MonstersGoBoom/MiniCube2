@@ -4,7 +4,7 @@ What is this ?
 
 An 8 bit fantasy computer. utilizing a 6502 CPU running 32768 cycles per frame, roughly 2mhz CPU.
 
-wheras the original [Minicube64](https://github.com/aeriform-io/minicube64) had a built in assembler, there are no plans for this feature in this version.
+wheras the original [Minicube64](https://github.com/aeriform-io/minicube64) had a built in assembler, there are no plans for this feature in this version. though Asm6f will be part of the repo.
 
 64kb of memory
 
