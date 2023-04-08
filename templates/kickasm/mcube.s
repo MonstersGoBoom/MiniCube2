@@ -32,13 +32,15 @@ BLT:
 	Mode:			.byte 0 	//	experimental
 }
 
+.const MAX_CHANNELS=6
+
 	* = $ff20 "APU" virtual
 APU:
 {
-	Page:			.fill 6,0
-	Control:	.fill 6,0
-	Freq_L:		.fill 6,0
-	Freq_H:		.fill 6,0
+	Page:			.fill MAX_CHANNELS,0
+	Control:	.fill MAX_CHANNELS,0
+	Freq_L:		.fill MAX_CHANNELS,0
+	Freq_H:		.fill MAX_CHANNELS,0
 } 
 
 	* = $fffe "NMI" virtual

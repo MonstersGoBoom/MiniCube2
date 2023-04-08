@@ -1,5 +1,6 @@
 *.cb2
 *.lbl
+*.sym
 templates/millfork/*.asm
 templates/kickasm/ByteDump.txt
-templates/kickasm/demo.sym
+f
