@@ -1,4 +1,4 @@
-1Currently the Base address of the VDC is $FF00 ( this may change before release )  
+Currently the Base address of the VDC is $FF00 ( this may change before release )  
 
 VDC Control.
 ------------
