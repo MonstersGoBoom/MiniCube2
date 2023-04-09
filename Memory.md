@@ -1,4 +1,4 @@
-Currently the Base address of the VDC is $FF00 ( this may change before release )  
+1Currently the Base address of the VDC is $FF00 ( this may change before release )  
 
 VDC Control.
 ------------
@@ -84,8 +84,13 @@ $0F - experimental bits.
 $1F - Device control bits
 
 %00000000 - video acts like the original minicube.
-%-------1 - color table is RGB444 vs RGB888 
-%------1- - screen update per 8 cycles vs at end of frame
+
+%-------x - color table is RGB332 8 bit vs RGB888 24 bit
+
+%------x- - RGB444 16 bit ( no alpha )
+
+%x------- - screen update per 8 cycles vs at end of frame. Dynamic palette change mid frame possible.
+
 
 Audio 
 -----
