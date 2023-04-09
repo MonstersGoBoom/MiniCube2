@@ -85,11 +85,11 @@ $1F - Device control bits
 
 %00000000 - video acts like the original minicube.
 
-%-------x - color table is RGB332 8 bit vs RGB888 24 bit
+	%-------x - color table is RGB332 8 bit vs RGB888 24 bit
 
-%------x- - RGB444 16 bit ( no alpha )
+	%------x- - RGB444 16 bit ( no alpha )
 
-%x------- - screen update per 8 cycles vs at end of frame. Dynamic palette change mid frame possible.
+	%x------- - screen update per 8 cycles vs at end of frame. Dynamic palette change mid frame possible.
 
 
 Audio 
