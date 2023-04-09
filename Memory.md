@@ -81,6 +81,11 @@ $0F - experimental bits.
 	- 1 draw transparent. 
 		to be explained 
 
+$1F - Device control bits
+
+%00000000 - video acts like the original minicube.
+%-------1 - color table is RGB444 vs RGB888 
+%------1- - screen update per 8 cycles vs at end of frame
 
 Audio 
 -----
