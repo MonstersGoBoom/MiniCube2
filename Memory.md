@@ -83,7 +83,7 @@ $0F - experimental bits.
 
 $1F - Device control bits
 
-%00000000 - video acts like the original minicube.
+	%00000000 - video acts like the original minicube.
 
 	%-------x - color table is RGB332 8 bit vs RGB888 24 bit
 
