@@ -19,7 +19,7 @@ for some musings [musing.md](https://github.com/MonstersGoBoom/MiniCube2/blob/ma
 
 Current similation targets.
 
-SDL2 desktop application. 
+Retroarch core. see ``retroarch`` folder. 
 
 ESP-32
 
