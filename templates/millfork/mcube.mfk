@@ -34,9 +34,9 @@ struct _video_type_ {
 	volatile byte CLUT
 	volatile byte Input
 }
-_video_type_ 		VDC @$ff00
-_blitter_type_ 	BLT @$ff03
-_audio_type_ 		APU @$ff20
+_video_type_ 		VDC @$0100
+_blitter_type_ 	BLT @$0103
+_audio_type_ 		APU @$0120
 
 pointer IRQ_pointer@$fffe
 

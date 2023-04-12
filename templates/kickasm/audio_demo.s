@@ -11,6 +11,9 @@ color:	.byte 0
 	* = $200 "Code"
 	sei
 
+	lda #$80 
+	sta VDC_control
+	
 	ldx #$ff
 	txs 
 

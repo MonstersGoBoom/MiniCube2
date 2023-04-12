@@ -1,12 +1,11 @@
 
-	* = $ff00 "VDC" virtual
+	* = $0100 "VDC" virtual
 VDC:
 {
 	Page:			.byte 0
 	CLUT:			.byte 0
 	IO:				.byte 0 
 }
-
 
 .const SOLID 		= %00000000
 .const KEYED 		= %10000000
@@ -34,7 +33,7 @@ BLT:
 
 .const MAX_CHANNELS=6
 
-	* = $ff20 "APU" virtual
+	* = $0120 "APU" virtual
 APU:
 {
 	Page:			.fill MAX_CHANNELS,0
@@ -42,6 +41,8 @@ APU:
 	Freq_L:		.fill MAX_CHANNELS,0
 	Freq_H:		.fill MAX_CHANNELS,0
 } 
+
+.const VDC_control = VDC+$1f
 
 	* = $fffe "NMI" virtual
 	IRQ:	.word 0
