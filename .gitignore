@@ -4,3 +4,5 @@
 templates/millfork/*.asm
 templates/kickasm/ByteDump.txt
 f
+*.o
+retroarch/log.txt

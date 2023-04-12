@@ -1,5 +1,5 @@
 // BUILD with 
-// millfork.exe -Xr demo.mfk -g -t mcube
+// millfork.exe -Xr demo.mfk -g -t mcube_2
 
 import mcube
 
@@ -9,7 +9,7 @@ byte ticker
 
 const array scaledWidth=[64,32,16,8]
 
-void main() {
+void main() @$200 {
 
 	asm {sei}
 
