@@ -46,7 +46,7 @@ int16_t wsg_tick()
 
 			//	add freq 
 			w->accumulator[v]+=freq;
-			w->accumulator[v]+=freq>>1;
+//			w->accumulator[v]+=freq>>1;
 			//	get sample offset
 			int offset = ((w->accumulator[v]>>16)&0x1f);	//	sample offset
 			//	get waveform offset 
