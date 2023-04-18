@@ -924,7 +924,7 @@ void irq6502() {
     push16(pc);
     push8(status);
     status |= FLAG_INTERRUPT;
-    pc = (uint16_t)read6502(0xfffe) | ((uint16_t)read6502(0xffff) << 8);
+    pc = (uint16_t)read6502(IO_VIDEO_IRQ) | ((uint16_t)read6502(IO_VIDEO_IRQ+1) << 8);
 }
 
 uint8_t callexternal = 0;

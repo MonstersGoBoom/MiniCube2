@@ -44,6 +44,6 @@ APU:
 
 .const VDC_control = VDC+$1f
 
-	* = $fffe "NMI" virtual
+	* = $011d "IRQ" virtual
 	IRQ:	.word 0
 

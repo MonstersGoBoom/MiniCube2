@@ -38,5 +38,5 @@ _video_type_ 		VDC @$0100
 _blitter_type_ 	BLT @$0103
 _audio_type_ 		APU @$0120
 
-pointer IRQ_pointer@$fffe
+pointer IRQ_pointer@$011d
 

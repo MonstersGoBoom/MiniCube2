@@ -130,16 +130,22 @@ static void update_input(void)
 {
 	input_poll_cb();
 	uint8_t pad=0;
-/*
-	if (tigrKeyHeld(dest,TK_LEFT)==1) 	pad |= 0b01000000;
-	if (tigrKeyHeld(dest,TK_RIGHT)==1) 	pad |= 0b10000000;
-	if (tigrKeyHeld(dest,TK_UP)==1) 			pad |= 0b00010000;
-	if (tigrKeyHeld(dest,TK_DOWN)==1) 		pad |= 0b00100000;
-	if (tigrKeyHeld(dest,'Z')==1) 				pad |= 0b00000001;
-	if (tigrKeyHeld(dest,'X')==1) 				pad |= 0b00000010;
-	if (tigrKeyHeld(dest,'C')==1) 				pad |= 0b00000100;
-	if (tigrKeyHeld(dest,TK_RETURN)==1) 	pad |= 0b00001000;
-*/
+   if (input_state_cb(0, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_START))
+   {
+			pad |= 0b00001000;
+	 }
+   if (input_state_cb(0, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_Y))
+   {
+			pad |= 0b00000100;
+	 }
+   if (input_state_cb(0, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_B))
+   {
+			pad |= 0b00000010;
+	 }
+   if (input_state_cb(0, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_A))
+   {
+			pad |= 0b00000001;
+	 }
    if (input_state_cb(0, RETRO_DEVICE_JOYPAD, 0, RETRO_DEVICE_ID_JOYPAD_UP))
    {
 		pad|=0b00010000;

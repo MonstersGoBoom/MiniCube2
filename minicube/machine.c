@@ -117,7 +117,7 @@ void machine_run(uint32_t *pixels,int pitch)
 				case 0:
 				{
 					uint16_t index = vram[z++]*3;
-					output[x]=(palette[index+2]<<16) | (palette[index+1]<<8) | (palette[index]<<0);
+					output[x]=(palette[index+0]<<16) | (palette[index+1]<<8) | (palette[index+2]<<0);
 					break;
 				}
 				case 1:

@@ -81,6 +81,10 @@ $0F - experimental bits.
 	- 1 draw transparent. 
 		to be explained 
 
+$1D-$1E - IRQ pointer
+	- NOTE NOTE NOTE 
+	- irq pointer is not at $fffe 
+	
 $1F - Device control bits
 
 	%00000000 - video acts like the original minicube.
